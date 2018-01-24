@@ -25,3 +25,11 @@ puts single_string(animals_capitalized)
 escape = "Margaret \n5'5\""
 puts escape
 escape.split #returns ["Margaret", "5'5\""]
+
+#Strings
+age = 5
+print "Happy"
+(age - 1).times do
+  print " happy"
+end
+puts " birthday!"
