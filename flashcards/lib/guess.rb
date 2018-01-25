@@ -29,7 +29,3 @@ class Guess
   end
 
 end
-
-card1 = Card.new("question????", "lalala")
-guess = Guess.new("lalala", card1)
-puts guess.card.inspect
