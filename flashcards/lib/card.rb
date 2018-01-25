@@ -7,7 +7,3 @@ class Card
   end
 
 end
-
-card1 = Card.new("test works?", "oh yea!")
-puts card1.question
-puts card1.answer
