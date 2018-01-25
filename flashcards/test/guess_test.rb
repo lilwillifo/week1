@@ -12,7 +12,12 @@ class GuessTest < Minitest::Test
     guess = Guess.new("Denver", card_1)
     assert_instance_of Guess, guess
     assert_equal "Denver", guess.response
-    assert_equal card_1, guess.card
+  end
+
+  def test_card_method
+    card_1 = Card.new("What is the capital of Virginia", "Richmond")
+    guess = Guess.new("Denver", card_1)
+    assert_equal card_1.inspect, guess.card
   end
 
   def test_correct_method
