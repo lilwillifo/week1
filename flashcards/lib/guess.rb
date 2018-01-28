@@ -1,23 +1,15 @@
 require './lib/card.rb'
 
 class Guess
-  attr_reader :response
+  attr_reader :response, :card
 
   def initialize(response, card)
     @response = response
     @card = card
   end
 
-  def card
-    @card.inspect
-  end
-
   def correct?
-    if response == @card.answer
-      true
-    else
-      false
-    end
+    response == @card.answer
   end
 
   def feedback
