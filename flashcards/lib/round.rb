@@ -33,8 +33,25 @@ class Round
     if tally == 0
       0
     else
-    tally / @guesses.length * 100
+    (tally.to_f / @guesses.length * 100).to_i
     end
+  end
+
+  def start
+    @deck.cards.each do |card|
+      round_number = @guesses.length + 1
+      puts "This is card number #{round_number} of #{@deck.count}."
+      puts "Question: #{current_card.question}"
+      user_guess = gets.chomp
+      guess = record_guess(user_guess)
+      puts guess.feedback
+    end
+    over
+  end
+
+  def over
+    puts "******** Game over! *********"
+    puts "You had #{number_correct} correct guesses out of #{@deck.count} for a score of #{percent_correct} percent!"
   end
 
 end

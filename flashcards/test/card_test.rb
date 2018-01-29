@@ -13,7 +13,7 @@ class CardTest < Minitest::Test
   end
 
   def test_card_exists
-    assert_instance_of Card, @card
+    assert_instance_of @card, Card
   end
 
   def test_card_has_question_and_answer
